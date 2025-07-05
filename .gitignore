@@ -11,24 +11,12 @@ __pycache__/
 *.sqlite3
 .env
 
-# Docker bind-mounted DB data (Postgres, MySQL, Redis, etc.)
-postgres/data/*
-mysql/data/*
-mongo/data/*
-dynamodb/data/*
-redis/data/*
-rabbitmq/data/*
-minio/data/*
+# Ignore all bind-mounted DB data folders
+*/data/*
 
+# But keep .gitkeep files in each data folder
+!*/data/.gitkeep
 
-# Except the .gitkeep file
-!mysql/data/.gitkeep
-!postgres/data/.gitkeep
-!mongo/data/.gitkeep
-!dynamodb/data/.gitkeep
-!redis/data/.gitkeep
-!rabbitmq/data/.gitkeep
-!minio/data/.gitkeep
 
 
 # Docker Compose logs & volumes (optional)

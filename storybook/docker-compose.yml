@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  storybook:
+    container_name: storybook
+    build:
+      context: ../../apps/web   # or wherever your Storybook lives
+      dockerfile: Dockerfile.storybook
+    ports:
+      - "6006:6006"
+    volumes:
+      - ../../apps/web:/app
+    environment:
+      - NODE_ENV=development
