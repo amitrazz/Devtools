@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  sonarqube:
+    image: sonarqube:10.4-community
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_JDBC_URL=jdbc:postgresql://postgres:5432/sonar
+      - SONAR_JDBC_USERNAME=admin
+      - SONAR_JDBC_PASSWORD=password
+    networks:
+      - devnet
+
+networks:
+  devnet:
+    external: true
+

@@ -37,3 +37,4 @@ volumes:
 networks:
   devnet:
     driver: bridge
+    external: true
