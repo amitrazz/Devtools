@@ -14,12 +14,13 @@ __pycache__/
 # Docker bind-mounted DB data (Postgres, MySQL, Redis, etc.)
 postgres/data/*
 mysql/data/*
-redis/data/*
 mongo/data/*
+redis/data/*
 
 # Except the .gitkeep file
 !mysql/data/.gitkeep
 !postgres/data/.gitkeep
+!mongo/data/.gitkeep
 
 
 # Docker Compose logs & volumes (optional)
