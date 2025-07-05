@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    ports:
+      - "9001:9000"   # Web UI
+      - "9443:9443"   # HTTPS (optional)
+    environment:
+      - ADMIN_PASSWORD=${PORTAINER_PASSWORD_HASH}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+      - devnet
+
+volumes:
+  portainer_data:
+
+networks:
+  devnet:
+    external: true
