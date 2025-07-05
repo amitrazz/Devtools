@@ -13,6 +13,17 @@ services:
     networks:
       - devnet
 
+  redis-insight:
+    image: redis/redisinsight:latest
+    container_name: redis-insight
+    restart: unless-stopped
+    ports:
+      - "5540:5540"  # RedisInsight UI
+    networks:
+      - devnet
+    depends_on:
+      - redis
+
 networks:
   devnet:
     driver: bridge
