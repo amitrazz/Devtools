@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  localstack:
+    image: localstack/localstack:3
+    container_name: localstack
+    ports:
+      - "4566:4566" # Gateway to all services
+      - "4571:4571" # Optional: for Lambda executor
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - LOCALSTACK_PERSISTENCE=1
+      - LOCALSTACK_HOST=localstack
+      - AWS_DEFAULT_REGION=us-east-1
+      - SERVICES=s3,sqs,dynamodb,lambda,apigateway,sns,cloudwatch
+    volumes:
+      - ./localstack.env:/etc/localstack/.env
+      - localstack-volume:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - devnet
+
+volumes:
+  localstack-volume:
+
+networks:
+  devnet:
+    driver: bridge
