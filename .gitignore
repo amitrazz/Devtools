@@ -15,12 +15,14 @@ __pycache__/
 postgres/data/*
 mysql/data/*
 mongo/data/*
+dynamodb/data/*
 redis/data/*
 
 # Except the .gitkeep file
 !mysql/data/.gitkeep
 !postgres/data/.gitkeep
 !mongo/data/.gitkeep
+!dynamodb/data/.gitkeep
 
 
 # Docker Compose logs & volumes (optional)
