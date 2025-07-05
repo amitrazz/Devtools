@@ -12,15 +12,13 @@ __pycache__/
 .env
 
 # Docker bind-mounted DB data (Postgres, MySQL, Redis, etc.)
-postgres/data/
-mysql/data/
-redis/data/
-mongo/data/
-
-# Ignore all contents inside data/
 postgres/data/*
+mysql/data/*
+redis/data/*
+mongo/data/*
 
 # Except the .gitkeep file
+!mysql/data/.gitkeep
 !postgres/data/.gitkeep
 
 
