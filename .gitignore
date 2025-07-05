@@ -17,6 +17,8 @@ mysql/data/*
 mongo/data/*
 dynamodb/data/*
 redis/data/*
+rabbitmq/data/*
+
 
 # Except the .gitkeep file
 !mysql/data/.gitkeep
@@ -24,6 +26,7 @@ redis/data/*
 !mongo/data/.gitkeep
 !dynamodb/data/.gitkeep
 !redis/data/.gitkeep
+!rabbitmq/data/.gitkeep
 
 
 # Docker Compose logs & volumes (optional)
