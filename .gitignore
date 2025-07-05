@@ -1,0 +1,48 @@
+# Node.js / JavaScript
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# Python / Django (if used)
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+
+# Docker bind-mounted DB data (Postgres, MySQL, Redis, etc.)
+docker/postgres/data/
+docker/mysql/data/
+docker/redis/data/
+docker/mongo/data/
+
+# Docker Compose logs & volumes (optional)
+*.log
+*.pid
+tmp/
+volumes/
+logs/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS & Windows junk
+.DS_Store
+Thumbs.db
+
+# Env files (optional — if sensitive)
+.env
+.env.*
+
+# MailHog message cache (if bind-mounted)
+docker/mailhog/data/
+
+# pgAdmin config (if used and mounted)
+docker/pgadmin/config/
+
+# Adminer session files
+docker/adminer/sessions/
