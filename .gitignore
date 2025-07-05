@@ -23,6 +23,7 @@ redis/data/*
 !postgres/data/.gitkeep
 !mongo/data/.gitkeep
 !dynamodb/data/.gitkeep
+!redis/data/.gitkeep
 
 
 # Docker Compose logs & volumes (optional)
